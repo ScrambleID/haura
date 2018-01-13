@@ -10,7 +10,7 @@ Haura is pure go simple concurrent lock-free in-memory queue.
 
     go get -u github.com/vural/haura
 
-## Runnig
+## Running
 
 It's so simple!
 
