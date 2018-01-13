@@ -4,7 +4,7 @@ Haura is pure go simple concurrent lock-free in-memory queue.
 
 ## Features
 - Currently support API (`enqueue`, `dequeue`, `stats`)
-- Cummunication beetween client over HTTP Protocol
+- Communication beetween client over HTTP Protocol
 
 ## Installation
 
