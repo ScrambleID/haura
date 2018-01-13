@@ -3,7 +3,6 @@ package server
 import (
 	"log"
 	"net/http"
-	"sync"
 )
 
 type Stats struct {
@@ -17,7 +16,6 @@ type Stats struct {
 
 type Haura struct {
 	Logger *log.Logger
-	mu     sync.Mutex
 	mux    *http.ServeMux
 	q      *queue
 
