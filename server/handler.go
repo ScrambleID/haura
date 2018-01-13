@@ -15,7 +15,7 @@ func (s *Haura) enqueue(w http.ResponseWriter, req *http.Request) {
 			Data string `json:"data"`
 		}
 
-		if err := json.NewDecoder(req.Body).Decode(&params); err != nil && params.Data != "" {
+		if err := json.NewDecoder(req.Body).Decode(&params); err != nil && params.Data == "" {
 			http.Error(w, err.Error(), 400)
 			return
 		}
