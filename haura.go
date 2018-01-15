@@ -8,6 +8,7 @@ import (
 	"os"
 	"os/signal"
 	"runtime"
+	"runtime/debug"
 	"time"
 
 	h "github.com/vural/haura/server"
@@ -21,6 +22,12 @@ func init() {
 }
 
 func main() {
+	// Force GC
+	go func() {
+		for _ = range time.Tick(10 * time.Second) {
+			debug.FreeOSMemory()
+		}
+	}()
 
 	stop := make(chan os.Signal, 1)
 
